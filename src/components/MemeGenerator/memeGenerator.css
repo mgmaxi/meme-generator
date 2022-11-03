@@ -1,0 +1,68 @@
+.memeGeneratorContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.memeSettings{
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    color: #fff;
+    text-shadow: 1px 3px 7px #000;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+figure{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 425px ;
+    width: 425px;
+    border-radius: 5px;
+    background-color: #000;
+}
+
+.memeImage{
+    height: 400px ;
+    width: 400px;
+}
+
+.memeText{
+    position: absolute;
+    margin: auto;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    word-wrap: break-word;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 24px;
+    text-shadow: 1px 3px 3px black;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 900px) {
+
+    .memeGeneratorContainer{
+        flex-direction: column;
+    }
+
+    figure{
+        height: 325px ;
+        width: 325px;
+    }
+
+    .memeImage{
+        height: 300px ;
+        width: 300px;
+    }
+    
+}
