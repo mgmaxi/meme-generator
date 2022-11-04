@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './memeGenerator.css';
+import logo from '../../assets/memeImages/troll.png';
 const MemeGenerator = () => {
 	const [memeImage, setMemeImage] = useState(1);
 	const [memeText, setMemeText] = useState('');
@@ -8,7 +9,10 @@ const MemeGenerator = () => {
 
 	return (
 		<>
-			<h1>Meme Generator</h1>
+			<div className="headerContainer">
+				<img src={logo} alt="Logo" className="logo" />
+				<h1>Generador de memes</h1>
+			</div>
 			<div className="memeGeneratorContainer">
 				<div className="memeSettings">
 					<h2>Elegí una imagen</h2>
@@ -19,7 +23,7 @@ const MemeGenerator = () => {
 						<option value="4">Alienígenas ancestrales</option>
 						<option value="5">Piénsalo</option>
 					</select>
-					<h2>Escribí un texto para el meme</h2>
+					<h2>Escribí el texto</h2>
 					<input type="text" onChange={e => setMemeText(e.target.value)} />
 					<button onClick={Download} type="button">
 						DESCARGAR

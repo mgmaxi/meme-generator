@@ -1,3 +1,26 @@
+.headerContainer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    color: #fff;
+    text-shadow: 1px 3px 7px #000;
+    text-transform: uppercase;
+    font-size: 42px;
+    text-align: center;
+    font-weight: 900;
+    font-family: 'Rubik', sans-serif;
+    letter-spacing: 1px;
+}
+
+.logo{
+    margin: 0 10px;
+    width: 50px;
+}
+
 .memeGeneratorContainer{
     display: flex;
     align-items: center;
@@ -9,11 +32,17 @@
     flex-direction: column;
 }
 
-h1{
-    color: #fff;
-    text-shadow: 1px 3px 7px #000;
-    text-transform: uppercase;
-    text-align: center;
+select, input {
+    height: 35px;
+    width: 300px;
+    font-size: 18px;
+}
+
+button {
+    height: 35px;
+    margin: 5px 0;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 figure{
@@ -51,8 +80,15 @@ figure{
 
 @media only screen and (max-width: 900px) {
 
+    .logo{
+        position: absolute;
+        top: 5px;
+        left: 5px;
+    }
+
     .memeGeneratorContainer{
         flex-direction: column;
+        height: auto;
     }
 
     figure{
