@@ -19,7 +19,9 @@ h1{
 .logo{
     margin: 0 10px;
     width: 50px;
+    animation:  movement 1s infinite alternate-reverse ease-in, invert 1s infinite alternate-reverse ease-in;
 }
+
 
 .memeGeneratorContainer{
     display: flex;
@@ -52,7 +54,6 @@ figure{
     align-items: center;
     height: 425px ;
     width: 425px;
-    border-radius: 5px;
     background-color: #000;
 }
 
@@ -75,6 +76,18 @@ figure{
     font-size: 24px;
     text-shadow: 1px 3px 3px black;
 }
+
+/* Animation */
+
+@keyframes movement {
+    from {transform: rotate(15deg);}
+    to {transform: rotate(-25deg);}
+  }
+
+  @keyframes invert {
+   from {filter: invert(0);}
+    to {filter: invert(100%);}
+  }
 
 /* MEDIA QUERIES */
 

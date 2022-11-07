@@ -1,11 +1,20 @@
 import React, { useState } from 'react';
-import './memeGenerator.css';
+import html2canvas from 'html2canvas';
 import logo from '../../assets/memeImages/troll.png';
+import './memeGenerator.css';
 const MemeGenerator = () => {
 	const [memeImage, setMemeImage] = useState(1);
 	const [memeText, setMemeText] = useState('');
 
-	const Download = () => {};
+	const Download = () => {
+		html2canvas(document.querySelector('#export')).then(function (canvas) {
+			let img = canvas.toDataURL('memes/jpg');
+			let link = document.createElement('a');
+			link.download = 'meme.jpg';
+			link.href = img;
+			link.click();
+		});
+	};
 
 	return (
 		<>
@@ -29,7 +38,7 @@ const MemeGenerator = () => {
 						DESCARGAR
 					</button>
 				</div>
-				<figure>
+				<figure id="export">
 					<img
 						src={require(`../../assets/memeImages/${memeImage}.png`)}
 						alt="memeImage"
