@@ -9,3 +9,10 @@
   background-color: #f0f0f0;
 }
 
+body{
+  overflow-x: hidden;
+
+}
+
+p, h2{ margin: 0;}
+

@@ -22,7 +22,6 @@ h1{
     animation:  movement 1s infinite alternate-reverse ease-in, invert 1s infinite alternate-reverse ease-in;
 }
 
-
 .memeGeneratorContainer{
     display: flex;
     align-items: center;
@@ -32,6 +31,16 @@ h1{
 .memeSettings{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titleText{
+    margin: 25px 0 5px 0;
+}
+
+input{
+    margin: 5px 0 8px 0;
 }
 
 select, input {
@@ -42,9 +51,26 @@ select, input {
 
 button {
     height: 35px;
+    width: 160px;
     margin: 5px 0;
     font-weight: bold;
     cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(196, 196, 196);
+    transition: all .3s ease-in-out;
+}
+
+
+button:hover{
+    transform: scale(1.02);
+    background-color: rgb(176, 176, 176);
+}
+
+.btnDownload{
+    width: 310px;
+    color: #fff;
+    background-color: rgb(0, 0, 0);
 }
 
 figure{
