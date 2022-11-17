@@ -1,0 +1,42 @@
+.card-img {
+  position: absolute;
+  top: 35px;
+  right: 15px;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  --m: radial-gradient(circle farthest-side at right, #000 99%, #0000) 0 100%/46%
+      92% no-repeat,
+    radial-gradient(circle farthest-side at left, #000 99%, #0000) 100% 0/46%
+      92% no-repeat;
+  -webkit-mask: var(--m);
+  mask: var(--m);
+  filter: grayscale(0.5);
+  transition: 0.1s linear;
+  transform: translatey(0px);
+  animation: float 6s ease-in-out infinite;
+  cursor: pointer;
+}
+
+.card-img:hover {
+  -webkit-mask-position: 7.5% 50%, 92.5% 50%;
+  mask-position: 7.5% 50%, 92.5% 50%;
+  filter: grayscale(0);
+}
+
+/* Animations */
+
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-25px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+}
